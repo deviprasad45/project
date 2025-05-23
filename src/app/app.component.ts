@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { CommonFunctionsService } from './shared/commonfunction.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'student-management';
+  constructor(private translate: TranslateService, private commonFunctionsService: CommonFunctionsService) {
+  }
+  ngOnInit() {
+    this.commonFunctionsService.setStorageValue('language', 'en');
+    this.commonFunctionsService.data.subscribe((res: any) => {
+      if (res) {
+        this.translate.use(res);
+      } else {
+        this.translate.use('en');
+      }
+    });
+  }
 }

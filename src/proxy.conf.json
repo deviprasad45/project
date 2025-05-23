@@ -1,0 +1,10 @@
+{
+  "/student_management_api": {
+    "target": "http://192.168.1.248:8079/StudentManagement",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/student_management_api": ""
+    }
+}

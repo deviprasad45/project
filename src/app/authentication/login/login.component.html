@@ -1,0 +1,95 @@
+<p-messages label="Info" life="4000" [(value)]="msgs"></p-messages>
+<div class="mt-4">
+  <img src="assets/images/school_1.png" class="emblem-image" />
+  <img src="assets/images/s_1.jpeg" class="nabard-image" />
+</div>
+<div class="container">
+  <div class="col-12 login-main">
+    <div class="col-12 p-0">
+      <div class="grid">
+        <!-- Left Side -->
+        <div class="xl:col-8 lg:col-7 md:col-12 sm:col-12">
+          <div class="login-left-image">
+            <div class="login-image1">
+              <img src="assets/images/teaching.gif" alt="related-erp-image">
+            </div>
+            <div class="login-image2">
+              <img src="assets/images/Pens.gif" alt="related-erp-image">
+            </div>
+            <div class="login-image3">
+              <img src="assets/images/Laptop.gif" alt="related-erp-image">
+            </div>
+            <div class="login-image7">
+              <img src="assets/images/building.gif" alt="related-erp-image">
+            </div>
+            <div class="login-image4">
+              <img src="assets/images/bus.gif" alt="related-erp-image">
+            </div>
+            <div class="login-image6">
+              <img src="assets/images/game.gif" alt="related-erp-image">
+            </div>
+            <div class="login-image5">
+              <img src="assets/images/graduation.gif" alt="related-erp-image">
+            </div>
+          </div>
+          <div class="login-name">
+            <div>School</div>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="xl:col-4 lg:col-5 md:col-12 sm:col-12 login-right-card">
+          <div class="d-flex justify-content-start login-card-style">
+            <div class="col-12 pb-0">
+              <div class="col-12 login-title pb-0 mt-2">WELCOME</div>
+              <div class="login-sub-title">Login with your credentials</div>
+              <form [formGroup]="userInfo" class="login-placeholder p-4 mt-2">
+                <!-- User name -->
+                <!-- <label class="login1-label">User Name<div class="login-bor-top"></div></label> -->
+                <input type="text" pInputText formControlName="userName" autocomplete="off" placeholder="User Name"
+                  class=" p-inputtext" [(ngModel)]="loginmodel.userName" />
+                <span><i class="fa fa-user-circle-o login-icon"></i></span>
+                <!-- Password -->
+                <!-- <label class="login1-label mt-4">Password<div class="login-bor-top"></div></label> -->
+                <div class="mt-4"></div>
+                <div class="w-100">
+                  <p-password [(ngModel)]="loginmodel.password" [toggleMask]="true" [feedback]="false"
+                    autocomplete="off" placeholder="Password" formControlName="password"></p-password>
+                  <span><i class="fa fa-key login-icon"></i></span>
+                  <!-- <input type="password" pInputText formControlName="password" autocomplete="off" placeholder="Password"
+                          class=" p-inputtext pswd-border" [(ngModel)]="loginmodel.password" />
+                        <button pButton type="button" (click)="showPwds()" icon="fa fa-eye" class=" pswd-eye"></button> -->
+
+                </div>
+
+
+                <div class="col-12 text-center login-button mt-3 p-0">
+                  <p-button label="login" (click)="login()"></p-button>
+                </div>
+                <div class="col-12 p-0 mt-4">
+                  <!-- <div class="login-remember-text pull-left">
+                        <p-checkbox [binary]="true" inputId="binary" />&nbsp;
+                        <span>Remember me</span>
+                      </div> -->
+                  <div class="mb-2">
+                    <a routerLink="/forgot-password" class="login-forgot-text">Forgot password ?</a>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="mt-4 login-unite-img">
+  <span class="powered-name">Powered By</span>
+  <img src="assets/images/intellect original.png" class="powered-image">
+</div>
+<div class="col-12 bottom-bg-image">
+  <img src="assets/images/login-footer.png" alt="related-erp-image">
+</div>
