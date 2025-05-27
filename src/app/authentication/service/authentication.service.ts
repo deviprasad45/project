@@ -32,7 +32,7 @@ export class AuthenticationService {
   } */
   checkUserLogin(users: Loginmodel){
     const httpHeaders = new HttpHeaders({});
-    return this.commonHttpService.post(users, httpHeaders, Configuration.RBAC + applicationConstants.USERS + applicationConstants.SIGN_IN);
+    return this.commonHttpService.post(users, httpHeaders, Configuration.STUDENT_MANAGEMENT + applicationConstants.USERS + applicationConstants.SIGN_IN);
   }
   logout() {
     // remove user from local storage to log user out
